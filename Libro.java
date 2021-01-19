@@ -36,4 +36,18 @@ public class Libro {
         return titulo;
     }
     
+    /**
+     * Muestra por pantalla los atributos del autor.
+     */
+    public void imprimeAutor() {
+        System.out.println(autor);
+    }
+    
+    /**
+     * Muestra por pantalla los atributos del titulo.
+     */
+    public void imprimeTitulo() {
+        System.out.println(titulo);
+    }
+    
 }
