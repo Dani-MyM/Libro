@@ -58,4 +58,21 @@ public class Libro {
     public int getNumeroPaginas() {
         return numeroPaginas;
     }
+    
+    /**
+     * Imprime por pantalla los detalles relativos al autor, titulo
+     * y numero de paginas del libro en la ventana de la terminal.
+     */
+    public void imprimirDetalles() {
+        System.out.println("Título = " + titulo);
+        System.out.println("Autor = " + autor);
+        System.out.println("Páginas = " + numeroPaginas);
+    }
+    
+    /**
+     * Devuelve lo que el metodo imprimirDetalles muestra por pantalla.
+     */
+    public void getDetalles() {
+        System.out.println("Título = " + titulo + "/" + "Autor = " + autor  + "/" + "Páginas = " + numeroPaginas);
+    }
 }
