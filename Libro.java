@@ -79,12 +79,11 @@ public class Libro {
     /**
      * Devuelve lo que el metodo imprimirDetalles muestra por pantalla.
      */
-    public void getDetalles() {
-        System.out.println("Título = " + titulo + "/" + "Autor = " + autor  + "/" + "Páginas = " + numeroPaginas);
+    public String getDetalles() {
         if (numeroReferencia != "") {
-            System.out.println("ZZZ");
+            return ("ZZZ");
         } else {
-            System.out.println("Título = " + titulo + "/" + "Autor = " + autor  + "/" + "Páginas = " + numeroPaginas + "/" + "Numero de referencia = " + numeroReferencia);
+            return ("Título = " + titulo + "/" + "Autor = " + autor  + "/" + "Páginas = " + numeroPaginas + "/" + "Numero de referencia = " + numeroReferencia);
         }
     }
     
