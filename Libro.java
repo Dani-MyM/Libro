@@ -81,6 +81,11 @@ public class Libro {
      */
     public void getDetalles() {
         System.out.println("Título = " + titulo + "/" + "Autor = " + autor  + "/" + "Páginas = " + numeroPaginas);
+        if (numeroReferencia != "") {
+            System.out.println("ZZZ");
+        } else {
+            System.out.println("Título = " + titulo + "/" + "Autor = " + autor  + "/" + "Páginas = " + numeroPaginas + "/" + "Numero de referencia = " + numeroReferencia);
+        }
     }
     
     /**
