@@ -13,6 +13,7 @@ public class Libro {
     private String autor;
     private String titulo;
     private int numeroPaginas;
+    private String numeroReferencia;
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
@@ -22,6 +23,7 @@ public class Libro {
         autor = autorLibro;
         titulo = tituloLibro;
         numeroPaginas = numeroDePaginas;
+        numeroReferencia = "";
     }
     
     /**
@@ -67,6 +69,11 @@ public class Libro {
         System.out.println("Título = " + titulo);
         System.out.println("Autor = " + autor);
         System.out.println("Páginas = " + numeroPaginas);
+        if (numeroReferencia != "") {
+            System.out.println("ZZZ");
+        } else {
+            System.out.println("Numero de referencia = " + numeroReferencia);
+        }
     }
     
     /**
@@ -75,4 +82,22 @@ public class Libro {
     public void getDetalles() {
         System.out.println("Título = " + titulo + "/" + "Autor = " + autor  + "/" + "Páginas = " + numeroPaginas);
     }
+    
+    /**
+     * Devuelve el numero de referencia del libro.
+     */
+    public String getNumeroReferencia() {
+        return numeroReferencia;
+    }    
+    
+    /**
+     * Permite cambiar el valor del numero de referencia.
+     */
+    public void setNumeroReferencia(String numeroDeReferencia) {
+        if (numeroReferencia.length() >= 3) {
+            numeroReferencia = numeroDeReferencia;
+        } else {   
+            System.out.println("ERROR - La cadena es medasiado corta");
+        }  
+    }    
 }
