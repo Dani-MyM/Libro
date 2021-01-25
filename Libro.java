@@ -80,11 +80,15 @@ public class Libro {
      * Devuelve lo que el metodo imprimirDetalles muestra por pantalla.
      */
     public String getDetalles() {
-        if (numeroReferencia != "") {
-            return ("ZZZ");
-        } else {
-            return ("Título = " + titulo + "/" + "Autor = " + autor  + "/" + "Páginas = " + numeroPaginas + "/" + "Numero de referencia = " + numeroReferencia);
+        String detallesLibro;
+        if(numeroReferencia != ""){
+            numeroReferencia =  numeroReferencia;          
         }
+        else{
+            numeroReferencia = "ZZZ";
+        }    
+        detallesLibro = ("Número de referencia = " + numeroReferencia + ", Título: " + titulo + ", Autor: " + autor + ", Páginas: " + numeroPaginas);
+        return detallesLibro;	        
     }
     
     /**
