@@ -81,13 +81,14 @@ public class Libro {
      */
     public String getDetalles() {
         String detallesLibro;
-        if(numeroReferencia != ""){
-            numeroReferencia =  numeroReferencia;          
+        String numeroDeReferencia = numeroReferencia;
+        if(numeroDeReferencia != ""){
+            numeroReferencia = numeroDeReferencia;          
         }
         else{
-            numeroReferencia = "ZZZ";
+            numeroDeReferencia = "ZZZ";
         }    
-        detallesLibro = ("Número de referencia = " + numeroReferencia + ", Título: " + titulo + ", Autor: " + autor + ", Páginas: " + numeroPaginas);
+        detallesLibro = ("Número de referencia = " + numeroDeReferencia + ", Título: " + titulo + ", Autor: " + autor + ", Páginas: " + numeroPaginas);
         return detallesLibro;	        
     }
     
@@ -102,7 +103,7 @@ public class Libro {
      * Permite cambiar el valor del numero de referencia.
      */
     public void setNumeroReferencia(String numeroDeReferencia) {
-        if (numeroReferencia.length() >= 3) {
+        if (numeroDeReferencia.length() >= 3) {
             numeroReferencia = numeroDeReferencia;
         } else {   
             System.out.println("ERROR - La cadena es medasiado corta");
