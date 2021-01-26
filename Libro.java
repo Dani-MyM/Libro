@@ -14,16 +14,18 @@ public class Libro {
     private String titulo;
     private int numeroPaginas;
     private String numeroReferencia;
+    private int vecesPrestado;
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
      */
-    public Libro(String autorLibro, String tituloLibro, int numeroDePaginas )
+    public Libro(String autorLibro, String tituloLibro, int numeroDePaginas)
     {
         autor = autorLibro;
         titulo = tituloLibro;
         numeroPaginas = numeroDePaginas;
         numeroReferencia = "";
+        vecesPrestado = 0;
     }
     
     /**
@@ -69,6 +71,7 @@ public class Libro {
         System.out.println("Título = " + titulo);
         System.out.println("Autor = " + autor);
         System.out.println("Páginas = " + numeroPaginas);
+        System.out.println("Veces Prestado =" + vecesPrestado);
         if (numeroReferencia != "") {
             System.out.println("ZZZ");
         } else {
@@ -88,8 +91,8 @@ public class Libro {
         else{
             numeroDeReferencia = "ZZZ";
         }    
-        detallesLibro = ("Número de referencia = " + numeroDeReferencia + ", Título: " + titulo + ", Autor: " + autor + ", Páginas: " + numeroPaginas);
-        return detallesLibro;	        
+        detallesLibro = ("Número de referencia = " + numeroDeReferencia + ", Título: " + titulo + ", Autor: " + autor + ", Páginas: " + numeroPaginas + "Veces Prestado: " + vecesPrestado);
+        return detallesLibro;           
     }
     
     /**
@@ -108,5 +111,19 @@ public class Libro {
         } else {   
             System.out.println("ERROR - La cadena es medasiado corta");
         }  
-    }    
+    } 
+    
+    /**
+     * Incrementa en uno el atributo vecesPrestado.
+     */
+    public void prestar() {
+        vecesPrestado++;
+    }
+    
+    /**
+     * Muestra las veces que se presta el libro.
+     */
+    public int getVecesPrestado() {
+        return vecesPrestado;
+    }
 }
